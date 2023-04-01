@@ -1,0 +1,222 @@
+:root {
+	--yq-bg-primary: #FFFFFF;
+	--yq-border-light: #eff0f0;
+	--yq-text-body: #585a5a;
+	--yq-text-caption: #8a8f8d;
+	--yq-text-primary: #262626;
+	--yq-border-primary: #ffffff;
+	--yq-blue-6: #117cee;
+
+}
+
+.data-comment-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 305px;
+	min-height: 100%;
+	background-color: var(--yq-bg-primary);
+	border-left: 1px solid var(--yq-border-light);
+	z-index: 415;
+
+	transition: transform .3s ease 0s;
+	box-sizing: content-box;
+
+	visibility: visible;
+	transform: translateX(0%);
+}
+
+.data-comment-toolbar {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 100px;
+	width: 305px;
+	height: 52px;
+	display: flex;
+	align-items: center;
+	padding: 16px 20px;
+	background-color: var(--yq-bg-primary);
+	z-index: 2;
+}
+
+.data-comment-container .data-comment-toolbar .data-comment-toolbar-content {
+	display: flex;
+	flex: 1;
+
+	height: 20px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.data-comment-toolbar-text {
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.data-comment-toolbar-closeBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+
+.data-comment-list-wrapper {
+	position: relative;
+	margin-top: 50px;
+	transform: translateY(0px)
+
+}
+
+.data-comment-group-1 {
+	top: 3px;
+	width: 100%;
+
+	visibility: visible;
+	position: absolute;
+
+}
+
+.data-comment-group-2 {
+	top: 700px;
+	width: 100%;
+
+	visibility: visible;
+	position: absolute;
+
+}
+
+.data-comment-group-box {
+	width: 288px;
+	border-radius: 8px;
+	background-color: var(--yq-bg-primary);
+	border: 1px solid var(--yq-border-light);
+	padding: 16px 0;
+	margin: 0 auto;
+}
+
+.data-comment-group-box-header {
+	display: flex;
+	align-items: center;
+	height: 30px;
+	padding: 0 16px;
+	margin-bottom: 10px;
+}
+
+.data-comment-group-box-header-text {
+	flex: auto;
+	color: var(--yq-text-body);
+	line-height: 22px;
+}
+
+.data-comment-group-box-item {
+	padding: 8px 16px 8px 48px;
+	position: relative
+}
+
+.data-comment-group-box-item-avatar {
+	position: absolute;
+	left: 16px;
+}
+
+.data-comment-group-box-avatar-img {
+	width: 24px;
+	min-width: 24px;
+	height: 24px;
+	border-radius: 12px;
+}
+
+.data-comment-group-box-avatar-main {
+	line-height: 22px;
+}
+
+.data-comment-group-box-item-name {
+	display: inline-flex;
+	align-items: center;
+}
+
+.data-comment-group-box-item-time {
+	color: var(--yq-text-caption);
+	vertical-align: middle;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.data-comment-group-box-item-content {
+	margin-top: 8px;
+}
+
+.data-comment-group-box-item-doc-content {
+	position: relative;
+}
+
+.ne-viewer {
+	position: relative;
+}
+
+.ne-viewer-header {
+	background-color: var(--yq-bg-primary);
+	display: none;
+	border-bottom: 1px solid var(--yq-border-primary);
+	height: 55px;
+}
+
+.ne-viewer .ne-viewer-body {
+	position: relative;
+	z-index: 1;
+	outline: none;
+	white-space: pre-wrap;
+	white-space: break-spaces;
+	word-break: break-word;
+	word-wrap: break-word;
+	font-family: 'Chinese Quote', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-variant-ligatures: none;
+	--link-color: var(--yq-blue-6);
+}
+
+.ne-typography-traditional {
+	line-height: 1.74;
+	letter-spacing: 0.05em;
+	color: var(--yq-text-primary);
+	font-size: 14px;
+}
+
+.ne-p {
+	display: block;
+	min-height: 24px;
+}
+
+.ne-viewer .ne-viewer-b-filler {
+	display: inline;
+	text-indent: 0;
+	min-width: 1px;
+	vertical-align: baseline;
+	font-size: 1em;
+	height: 1em;
+	user-select: none;
+}
+
+.data-comment-group-box-item-doc-content-zero {
+	height: 0;
+	overflow: hidden;
+}
+
+.data-comment-group-box-item-action {
+	margin-top: 8px;
+	margin-left: -4px;
+	color: var(--yq-text-caption);
+}
+
+.data-comment-group-box-item-action-comment {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	margin-right: 8px;
+	border-radius: 3px;
+	cursor: pointer;
+}

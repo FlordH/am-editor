@@ -75,7 +75,7 @@ export default defineConfig({
 			pathRewrite: { '^/api': '' },
 		},
 		'/api': {
-			target: 'https://editor.aomao.com',
+			target: 'http://localhost:7001/',
 			changeOrigin: true,
 			pathRewrite: { '^/api': '' },
 		},

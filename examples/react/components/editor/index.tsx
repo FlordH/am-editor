@@ -32,6 +32,8 @@ import { cards, pluginConfig, plugins } from './config';
 import Toolbar, { ToolbarItemProps } from './toolbar';
 import './index.less';
 
+import CommentDrawer from '../comment/drawer';
+
 export type Content = {
 	value: string;
 	paths: Array<{ id: Array<string>; path: Array<Path> }>;
@@ -423,24 +425,25 @@ const EditorComponent: React.FC<EditorProps> = ({
 								/>
 							}
 						</div>
-						{engine.current && !isMobile && props.comment && (
-							<CommentLayer
-								ref={comment}
-								editor={engine.current}
-								member={
-									member ||
-									({
-										avatar: 'https://cdn-image.aomao.com/10016/avatar/2020/04/17/1587113793-da092550-5b12-477e-b229-631908d0ac2b.png',
-										name: 'test',
-										uuid: 'test',
-									} as unknown as CursorData)
-								}
-								onUpdate={onCommentRequestUpdate}
-								{...(props.comment === true
-									? {}
-									: props.comment)}
-							/>
-						)}
+						<CommentDrawer />
+						{/*{engine.current && !isMobile && props.comment && (*/}
+						{/*	<CommentLayer*/}
+						{/*		ref={comment}*/}
+						{/*		editor={engine.current}*/}
+						{/*		member={*/}
+						{/*			member ||*/}
+						{/*			({*/}
+						{/*				avatar: 'https://cdn-image.aomao.com/10016/avatar/2020/04/17/1587113793-da092550-5b12-477e-b229-631908d0ac2b.png',*/}
+						{/*				name: 'test',*/}
+						{/*				uuid: 'test',*/}
+						{/*			} as unknown as CursorData)*/}
+						{/*		}*/}
+						{/*		onUpdate={onCommentRequestUpdate}*/}
+						{/*		{...(props.comment === true*/}
+						{/*			? {}*/}
+						{/*			: props.comment)}*/}
+						{/*	/>*/}
+						{/*)}*/}
 					</div>
 					{engine.current && !isMobile && props.toc && (
 						<Toc editor={engine.current} />
