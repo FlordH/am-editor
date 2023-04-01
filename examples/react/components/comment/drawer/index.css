@@ -97,6 +97,9 @@
 	padding: 16px 0;
 	margin: 0 auto;
 }
+.data-comment-group-box:hover {
+	box-shadow: 0 1px 4px -2px rgb(0 0 0 / 13%), 0 2px 8px 0 rgb(0 0 0 / 8%), 0 8px 16px 4px rgb(0 0 0 / 4%);
+}
 
 .data-comment-group-box-header {
 	display: flex;
