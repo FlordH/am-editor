@@ -367,21 +367,21 @@ const EditorComponent: React.FC<EditorProps> = ({
 	};
 
 	// 点击编辑区域外的空白位置继续聚焦编辑器
-	const wrapperMouseDown = (event: React.MouseEvent) => {
-		const { target } = event;
-		if (
-			!target ||
-			['TEXTAREA', 'INPUT'].indexOf((target as Node).nodeName) > -1
-		)
-			return;
-		if (
-			engine.current &&
-			engine.current.isFocus() &&
-			$(target).closest('.editor-content').length === 0
-		) {
-			event.preventDefault();
-		}
-	};
+	// const wrapperMouseDown = (event: React.MouseEvent) => {
+	// 	const { target } = event;
+	// 	if (
+	// 		!target ||
+	// 		['TEXTAREA', 'INPUT'].indexOf((target as Node).nodeName) > -1
+	// 	)
+	// 		return;
+	// 	if (
+	// 		engine.current &&
+	// 		engine.current.isFocus() &&
+	// 		$(target).closest('.editor-content').length === 0
+	// 	) {
+	// 		event.preventDefault();
+	// 	}
+	// };
 	// 编辑器区域单击在没有元素的位置，聚焦到编辑器
 	const editorAreaClick = (event: React.MouseEvent) => {
 		const { target } = event;
@@ -411,7 +411,10 @@ const EditorComponent: React.FC<EditorProps> = ({
 				{engine.current && (
 					<Toolbar engine={engine.current} items={props.toolbar} />
 				)}
-				<div className="editor-wrapper" onMouseDown={wrapperMouseDown}>
+				<div
+					className="editor-wrapper"
+					// onMouseDown={wrapperMouseDown}
+				>
 					<div className="editor-container">
 						<div
 							className="editor-content"
